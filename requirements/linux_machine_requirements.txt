@@ -1,2 +1,0 @@
--r container_requirements.txt
-screen-brightness-control==0.16.2
