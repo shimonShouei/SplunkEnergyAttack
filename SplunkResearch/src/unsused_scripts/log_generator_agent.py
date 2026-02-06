@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import requests
 import os
 from transformers import GPT2LMHeadModel, GPT2Tokenizer  # GPT-J via Hugging Face
-load_dotenv('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/.env')
+load_dotenv('/home/shouei/SplunkEnergyAttack/SplunkResearch/src/.env')
 # Configuration
 MONITORED_FILE = "/var/log/generated_events.log"  # Change as needed
 SPLUNK_API_URL = "https://localhost:8089/services/search/jobs"

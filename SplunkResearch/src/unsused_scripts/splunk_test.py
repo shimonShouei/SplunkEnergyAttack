@@ -90,7 +90,7 @@ def monitor_search_resources(host, port, username, password, search_query, durat
 
 # Example usage
 if __name__ == "__main__":
-    load_dotenv('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/.env')
+    load_dotenv('/home/shouei/SplunkEnergyAttack/SplunkResearch/src/.env')
     monitor_search_resources(
         host=os.getenv("SPLUNK_HOST"),
         port=os.getenv("SPLUNK_PORT"),

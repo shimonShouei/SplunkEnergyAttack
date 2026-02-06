@@ -124,8 +124,8 @@ def aggregate_data(all_data, metric_to_aggregate, hparams_to_include):
 
 # Example usage
 # Example usage
-base_dir = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments_____/train/tensorboard/train_20241201_142030_1'
-output_dir = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments_____/train/processed_tesnorboard'
+base_dir = '/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments_____/train/tensorboard/train_20241201_142030_1'
+output_dir = '/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments_____/train/processed_tesnorboard'
 tags_to_load =  ["train/p_values", "train/duration_gap", "train/duration", "train/episodic_policy"]
 all_data = load_data_from_multiple_dirs(base_dir)#), tags=tags_to_load)
 save_data_to_csv(all_data, output_dir)

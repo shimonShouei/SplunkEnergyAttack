@@ -3,14 +3,14 @@ import stable_baselines3 as sb3
 from sb3_contrib import RecurrentPPO
 sb3.__version__
 from SplunkResearch.src.experiment_manager_new import *
-manager = ExperimentManager(base_dir="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments")
+manager = ExperimentManager(base_dir="/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments")
 action_type = "Action8"
 
 # load model
-# model_path = r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20251010153827_70000_steps.zip"
-# model_path = r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/retrain_20251020135416_30000_steps.zip"
-model_path = r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20251215190219_30000_steps.zip"
-# model_path = r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250626010440_151000_steps.zip"
+# model_path = r"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20251010153827_70000_steps.zip"
+# model_path = r"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/retrain_20251020135416_30000_steps.zip"
+model_path = r"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20251215190219_30000_steps.zip"
+# model_path = r"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250626010440_151000_steps.zip"
 env_config = SplunkConfig(
     # fake_start_datetime=retrain_fake_start_datetime,
     rule_frequency=120, #600,

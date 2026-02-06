@@ -77,7 +77,7 @@ def main():
     ]
 
     # Read and process data
-    global_path = r'/home/shouei/GreenSecurity-FirstExperiment/experiments/baseline'
+    global_path = r'/home/shouei/SplunkEnergyAttack/experiments/baseline'
     no_agent_data_paths = [rf'{global_path}/baseline_splunk_train-v32_2880.csv']#[rf'{global_path}/no_agent_20250129_114533.csv', rf'{global_path}/no_agent_20250131_000047.csv']
     
     for no_agent_data_path in no_agent_data_paths:
@@ -94,7 +94,7 @@ def main():
         # sort by start time and end time
         no_agent_csv = no_agent_csv.sort_values(by=['start_time', 'end_time'])
         # Process top log types
-        top_logtypes = pd.read_csv(r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/resources/top_logtypes.csv")
+        top_logtypes = pd.read_csv(r"/home/shouei/SplunkEnergyAttack/SplunkResearch/resources/top_logtypes.csv")
         top_logtypes = top_logtypes[top_logtypes['source'].str.lower().isin(['wineventlog:security', 'wineventlog:system'])]
         top_logtypes = top_logtypes.sort_values(by='count', ascending=False)[['source', "EventCode"]].values.tolist()[:100]
         top_logtypes = [(x[0].lower(), str(x[1])) for x in top_logtypes]

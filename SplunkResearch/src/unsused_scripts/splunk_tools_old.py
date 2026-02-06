@@ -31,7 +31,7 @@ from utils.general_consts import LoggerName
 from application_logging.handlers.elastic_handler import get_elastic_logging_handler
 import traceback
 
-load_dotenv('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/.env')
+load_dotenv('/home/shouei/SplunkEnergyAttack/SplunkResearch/src/.env')
 # Precompile the regex pattern
 pattern = re.compile(r"'(.*?)' (\D+) (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3} IDT) (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) \s+(\d+)\s+(\d+\.\d+)") # IDT and IST are changed when the time is changed
 savedsearches_path = '/opt/splunk/etc/users/shouei/search/local/savedsearches.conf'
@@ -39,7 +39,7 @@ APP = 'search'
 HEADERS = {
     "Content-Type": "application/x-www-form-urlencoded"
 }
-PREFIX_PATH = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/'
+PREFIX_PATH = '/home/shouei/SplunkEnergyAttack/SplunkResearch/'
 import logging
 logger = logging.getLogger(__name__)
 
@@ -136,7 +136,7 @@ class SplunkTools(object):
                 logger.error(f'Failed to connect to Splunk: {str(e)}')
                 time.sleep(120)#TODO: change to 5
         self._initialized = True
-        self.log_file_prefix = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/monitor_files/'
+        self.log_file_prefix = '/home/shouei/SplunkEnergyAttack/SplunkResearch/monitor_files/'
 
         if self.mode == Mode.PROFILE:
                 response = es_logger.handlers[0].es.delete_by_query(
@@ -161,8 +161,8 @@ class SplunkTools(object):
             current_ts = ts_start_time
 
             logger.info('Loading sampled real logs distribution from splunk_results.csv')
-            # df  = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/splunk_results_non_freq.csv")
-            df  = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/splunk_results.csv")
+            # df  = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/src/splunk_results_non_freq.csv")
+            df  = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/src/splunk_results.csv")
             # df['_time'] = pd.to_datetime(df['_time'], format="%Y-%m-%dT%H:%M:%S.000%z",  errors='coerce')
             # # convert _time format from 2023-09-01T00:00:00 to 2023-09-01 00:00:00
             # df['_time'] = df['_time'].dt.strftime('%Y-%m-%d %H:%M:%S')

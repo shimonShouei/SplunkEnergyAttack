@@ -115,7 +115,7 @@ class BaseRuleExecutionWrapperWithPrediction(RewardWrapper):
         self.baseline_measured = False
         # if is_mock:
         #     for rule in self.unwrapped.splunk_tools.active_saved_searches:
-        #         self.energy_models[rule] = pickle.load(open(f"/home/shouei/GreenSecurity-FirstExperiment/baseline_splunk_train-v32_2880_cpu_regressor_results/RandomForestRegressor_{rule}_with alert = 0.pkl", "rb"))
+        #         self.energy_models[rule] = pickle.load(open(f"/home/shouei/SplunkEnergyAttack/baseline_splunk_train-v32_2880_cpu_regressor_results/RandomForestRegressor_{rule}_with alert = 0.pkl", "rb"))
         
         # Initialize alert predictor
 
@@ -126,8 +126,8 @@ class BaseRuleExecutionWrapperWithPrediction(RewardWrapper):
         self.is_train = is_train
         # lode joblib models for energy consumption for each rule
         model_path = f"/home/shouei/GreenSecurityMeasurementAndOptimizationFramework/SplunkResearch/src/models_all_rules_cpu.joblib"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/models_all_rules_cpu.joblib"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/model_{rule}.joblib"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/src/models_all_rules_cpu.joblib"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/model_{rule}.joblib"
         if path.exists(model_path):
             self.energy_models['all'] = joblib.load(model_path)
             # self.energy_models[rule] = joblib.load(model_path)

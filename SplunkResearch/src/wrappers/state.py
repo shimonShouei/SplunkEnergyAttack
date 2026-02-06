@@ -28,7 +28,7 @@ class StateWrapper(ObservationWrapper):
         self.normal_alert_predictors = {}
 
         #for rule in self.unwrapped.savedsearches:
-        #    self.normal_alert_predictors[rule] = joblib.load(f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/models_{rule}_alerts.joblib")
+        #    self.normal_alert_predictors[rule] = joblib.load(f"/home/shouei/SplunkEnergyAttack/SplunkResearch/src/models_{rule}_alerts.joblib")
 
 
         self.total_current_logs = 0
@@ -368,8 +368,8 @@ class StateWrapper5(StateWrapper):
             # shape=(len(self.unwrapped.top_logtypes),),  # +1 for 'other' category
             dtype=np.float64
         )
-        self.baseline_alerts = self._load_pickle("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/baseline/baseline_alerts.pkl", default={})
-        self.ac_baseline_alerts = self._load_pickle("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/baseline/ac_baseline_alerts.pkl", default={})
+        self.baseline_alerts = self._load_pickle("/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/baseline/baseline_alerts.pkl", default={})
+        self.ac_baseline_alerts = self._load_pickle("/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/baseline/ac_baseline_alerts.pkl", default={})
     
     def _load_pickle(self, filename, default):
         if os.path.exists(filename):
@@ -490,9 +490,9 @@ class StateWrapper5(StateWrapper):
 
                 # --- Only dump if we created new entries ---
                 if created_new_baseline:
-                    self._dump_pickle(self.baseline_alerts, "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/baseline/baseline_alerts.pkl")
+                    self._dump_pickle(self.baseline_alerts, "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/baseline/baseline_alerts.pkl")
                 if created_new_baseline:
-                    self._dump_pickle(self.ac_baseline_alerts, "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/baseline/ac_baseline_alerts.pkl")
+                    self._dump_pickle(self.ac_baseline_alerts, "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/baseline/ac_baseline_alerts.pkl")
         state = np.append(state, expected_normal_alert_rates)
         state = np.append(state, expected_fake_alert_rates)
 

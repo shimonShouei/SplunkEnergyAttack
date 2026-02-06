@@ -16,7 +16,7 @@ from unsused_scripts.datetime_manager import MockedDatetimeManager
 from strategies.state_strategy import StateStrategy4
 from matplotlib import pyplot as plt
 import sys
-sys.path.insert(1, '/home/shouei/GreenSecurity-FirstExperiment')
+sys.path.insert(1, '/home/shouei/SplunkEnergyAttack')
 
 from SplunkResearch.resources.section_logtypes import section_logtypes
 
@@ -30,13 +30,13 @@ if not ("alerts.pkl" in os.listdir() and "distributions.pkl" in os.listdir() and
                     "Kerberoasting spn request with RC4 encryption",
                     "Clop Ransomware Known Service Name"]
     frequency = "1"
-    top_logtypes = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/resources/top_logtypes.csv")
+    top_logtypes = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/resources/top_logtypes.csv")
     top_logtypes = top_logtypes.sort_values(by='count', ascending=False)[['source', "EventCode"]].values.tolist()[:50]
     top_logtypes = [(x[0].lower(), str(x[1])) for x in top_logtypes]
     print("num of rows in top_logtypes: ", len(top_logtypes))
     splunk = SplunkTools(savedsearches, 1, frequency)
     datetime_manager = MockedDatetimeManager(start_time)
-    reward_strategy = RewardStrategy43(datetime_manager, splunk, len(savedsearches),no_agent_table_path="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments_____/no_agent_baseline/no_agent_20241228_231350.csv" )
+    reward_strategy = RewardStrategy43(datetime_manager, splunk, len(savedsearches),no_agent_table_path="/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments_____/no_agent_baseline/no_agent_20241228_231350.csv" )
     state_strategy = StateStrategy4(top_logtypes)
 
     end_time = "06/01/2024:00:00:00"
@@ -322,7 +322,7 @@ def main():
     predictor.plot_residuals(y_test, y_pred, 'residuals_plot.png')
     
     # Load logtypes and plot feature importance
-    top_logtypes = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/resources/top_logtypes.csv")
+    top_logtypes = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/resources/top_logtypes.csv")
     top_logtypes = top_logtypes.sort_values(by='count', ascending=False)[['source', "EventCode"]].values.tolist()[:300]
     feature_names = [f"{x[0].lower()}_{x[1]}" for x in top_logtypes]
     top_features = predictor.plot_feature_importance(feature_names, 'feature_importance.png')

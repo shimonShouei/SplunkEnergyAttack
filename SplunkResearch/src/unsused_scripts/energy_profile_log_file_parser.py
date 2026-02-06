@@ -119,8 +119,8 @@ def aggregate_cpu_usage(iterations, cpu_csv_path):
 
 
 def main():
-    log_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/energy_profile_final.log"     # ⬅️ Replace with your real log file
-    cpu_csv_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/Inspector (2).csv"      # ⬅️ Replace with your real CPU CSV
+    log_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/energy_profile_final.log"     # ⬅️ Replace with your real log file
+    cpu_csv_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/src/Inspector (2).csv"      # ⬅️ Replace with your real CPU CSV
     output_csv = "aggregated_output.csv"
 
     print("[*] Parsing iterations from log...")

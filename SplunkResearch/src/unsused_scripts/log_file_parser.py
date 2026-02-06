@@ -128,7 +128,7 @@ def train_nn_model(X, y):
     return model, scaler
 
 def main():
-    file_path = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/exp_20240318_023133/log_train.txt'
+    file_path = '/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/exp_20240318_023133/log_train.txt'
     episodes = parse_log_file(file_path)
     X, y_duration, y_energy = prepare_data(episodes)
     train_test_split(X, y_duration, test_size=0.2, random_state=42)

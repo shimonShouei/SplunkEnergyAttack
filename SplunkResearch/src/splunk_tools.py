@@ -358,7 +358,7 @@ class SplunkTools(object):
 
     #         logger.info('Loading sampled real logs distribution from splunk_results.csv')
     #         df  = pd.read_csv("/home/shouei/GreenSecurityMeasurementAndOptimizationFramework/SplunkResearch/src/splunk_results_random.csv")
-    #         # df  = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/splunk_results.csv")
+    #         # df  = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/src/splunk_results.csv")
     #         # df['_time'] = pd.to_datetime(df['_time'], format="%Y-%m-%dT%H:%M:%S.000%z",  errors='coerce')
     #         # # convert _time format from 2023-09-01T00:00:00 to 2023-09-01 00:00:00
     #         # df['_time'] = df['_time'].dt.strftime('%Y-%m-%d %H:%M:%S')

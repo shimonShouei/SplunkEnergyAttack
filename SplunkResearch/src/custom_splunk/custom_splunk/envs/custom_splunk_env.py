@@ -296,7 +296,7 @@ if __name__ == "__main__":
     # Create base environment
     env = gym.make(id="splunk_train-v32", config=config,
 )    
-    top_logtypes = pd.read_csv("/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/resources/top_logtypes.csv")
+    top_logtypes = pd.read_csv("/home/shouei/SplunkEnergyAttack/SplunkResearch/resources/top_logtypes.csv")
     # include only system and security logs
     top_logtypes = top_logtypes[top_logtypes['source'].str.lower().isin(['wineventlog:security', 'wineventlog:system'])]
     top_logtypes = top_logtypes.sort_values(by='count', ascending=False)[['source', "EventCode"]].values.tolist()[:50]

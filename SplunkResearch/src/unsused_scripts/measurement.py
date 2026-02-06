@@ -6,12 +6,12 @@ from time import sleep
 import os
 import sys
 import urllib3
-sys.path.insert(1, '/home/shouei/GreenSecurity-FirstExperiment/Scanner')
+sys.path.insert(1, '/home/shouei/SplunkEnergyAttack/Scanner')
 from scanner_class import Scanner
 urllib3.disable_warnings()
 
 
-PATH = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/VMware, Inc. Linux 3.10.0-1160.108.1.el7.x86_64/Splunk Enterprise SIEM/Power Saver Plan/One Scan/'
+PATH = '/home/shouei/SplunkEnergyAttack/SplunkResearch/VMware, Inc. Linux 3.10.0-1160.108.1.el7.x86_64/Splunk Enterprise SIEM/Power Saver Plan/One Scan/'
 CPU_TDP = 200
 import logging
 logger = logging.getLogger(__name__)

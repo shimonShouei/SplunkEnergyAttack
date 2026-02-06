@@ -177,7 +177,7 @@ def plot_security_runs(df, run_type=None, metric=None, smooth_factor=0.6):
 # Example usage:
 if __name__ == "__main__":
     # Replace with your TensorBoard log directory
-    base_dir = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments_____/train/tensorboard/train_20241118_160536_1"
+    base_dir = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments_____/train/tensorboard/train_20241118_160536_1"
     
     # Extract data
     df = extract_security_runs(base_dir)

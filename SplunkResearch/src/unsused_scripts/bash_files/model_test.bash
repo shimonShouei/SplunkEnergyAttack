@@ -18,9 +18,9 @@ saved_searches_path="/opt/splunk/etc/users/shouei/search/local/savedsearches.con
 test_episodes=50
 # env_name=
 
-# test_experiment="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/exp_20240207_180124"
+# test_experiment="/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/exp_20240207_180124"
 test_experiment="last"
-config_path="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/config.json"
+config_path="/home/shouei/SplunkEnergyAttack/SplunkResearch/src/config.json"
 
 
 alpha=0

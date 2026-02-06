@@ -5,7 +5,7 @@ import numpy as np
 import urllib3
 import json
 import sys
-sys.path.insert(1, '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch')
+sys.path.insert(1, '/home/shouei/SplunkEnergyAttack/SplunkResearch')
 import logging
 from stable_baselines3.ppo.policies import MlpPolicy
 from stable_baselines3.common.evaluation import evaluate_policy
@@ -217,7 +217,7 @@ class Experiment:
             json.dump(parameters, fp)
         # save reward_calculator.py to the experiment directory
         # with open(f'{path}/reward_calculator.py', 'w') as fp:
-        #     with open(r'/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/reward_calculator.py', 'r') as fp2:
+        #     with open(r'/home/shouei/SplunkEnergyAttack/SplunkResearch/src/reward_calculator.py', 'r') as fp2:
         #         fp.write(fp2.read())
     
     def load_parameters(self, filename):

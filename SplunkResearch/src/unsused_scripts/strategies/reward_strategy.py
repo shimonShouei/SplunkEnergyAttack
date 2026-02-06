@@ -18,7 +18,7 @@ from scipy.special import rel_entr
 
 logger = logging.getLogger(__name__)
 CPU_TDP = 200
-PATH = '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/VMware, Inc. Linux 3.10.0-1160.92.1.el7.x86_64/Splunk Enterprise SIEM/Power Saver Plan/One Scan/'
+PATH = '/home/shouei/SplunkEnergyAttack/SplunkResearch/VMware, Inc. Linux 3.10.0-1160.92.1.el7.x86_64/Splunk Enterprise SIEM/Power Saver Plan/One Scan/'
 
 
 

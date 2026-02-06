@@ -45,5 +45,5 @@ if __name__ == "__main__":
     start_date = "05/01/2023:00:00:00"
     end_date = "05/14/2024:23:59:59"
     batch_size = 10000
-    output_dir = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/output"
+    output_dir = "/home/shouei/SplunkEnergyAttack/SplunkResearch/output"
     extract_events(index_name, start_date, end_date, batch_size, output_dir)

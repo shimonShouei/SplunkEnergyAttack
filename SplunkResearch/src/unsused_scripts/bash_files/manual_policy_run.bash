@@ -19,9 +19,9 @@ train_episodes=275
 test_episodes=5
 # env_name=
 
-# test_experiment="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/exp_20240207_180124"
+# test_experiment="/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/exp_20240207_180124"
 test_experiment="last"
-config_path="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/config.json"
+config_path="/home/shouei/SplunkEnergyAttack/SplunkResearch/src/config.json"
 
 # greed search on learning rate alpha beta and gamma
 for env_name in 32 

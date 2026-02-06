@@ -8,7 +8,7 @@ import datetime
 import time
 import json
 import sys
-sys.path.insert(1, '/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch')
+sys.path.insert(1, '/home/shouei/SplunkEnergyAttack/SplunkResearch')
 from resources.logtypes import logtypes
 from resources.state_span import state_span
 from resources.section_logtypes import section_logtypes
@@ -81,14 +81,14 @@ class Experiment:
         if time_range is None:
             time_range = ("04/29/2023:00:00:00","05/02/2023:00:00:00")
             splunk_tools_instance.delete_fake_logs(time_range)
-            self.empty_monitored_files(r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/monitor_files/wineventlog:security.txt")
-            self.empty_monitored_files(r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/monitor_files/wineventlog:system.txt")
+            self.empty_monitored_files(r"/home/shouei/SplunkEnergyAttack/SplunkResearch/monitor_files/wineventlog:security.txt")
+            self.empty_monitored_files(r"/home/shouei/SplunkEnergyAttack/SplunkResearch/monitor_files/wineventlog:system.txt")
             return time_range
         date = time_range[1].split(':')[0]
         time_range = (f'{date}:00:00:00', f'{date}:23:59:59')
         splunk_tools_instance.delete_fake_logs(time_range)
-        self.empty_monitored_files(r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/monitor_files/wineventlog:security.txt")
-        self.empty_monitored_files(r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/monitor_files/wineventlog:system.txt")
+        self.empty_monitored_files(r"/home/shouei/SplunkEnergyAttack/SplunkResearch/monitor_files/wineventlog:security.txt")
+        self.empty_monitored_files(r"/home/shouei/SplunkEnergyAttack/SplunkResearch/monitor_files/wineventlog:system.txt")
         return time_range
     
     def setup_environment(self, parameters):
@@ -161,7 +161,7 @@ class Experiment:
         env = self.setup_environment(parameters)
         # save reward_calculator.py to the experiment directory
         with open(f'{self.experiment_dir}/reward_calculator.py', 'w') as fp:
-            with open(r'/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/reward_calculator.py', 'r') as fp2:
+            with open(r'/home/shouei/SplunkEnergyAttack/SplunkResearch/src/reward_calculator.py', 'r') as fp2:
                 fp.write(fp2.read())
         new_logger = configure(f"{self.experiment_dir}/tensorboard/", ["stdout", "csv", "tensorboard"])
         self.save_parameters_to_file(parameters, f'{self.experiment_dir}/parameters_train.json')

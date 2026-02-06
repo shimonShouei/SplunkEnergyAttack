@@ -11,7 +11,7 @@ echo
 export PATH=$PATH:/home/shouei/local/dmidecode
 PYTHON_SCRIPT="src/main.py"
 LIMITS_PATH="/opt/splunk/etc/system/local/limits.conf"
-CONFIG_PATH="/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/config.json"
+CONFIG_PATH="/home/shouei/SplunkEnergyAttack/SplunkResearch/src/config.json"
 
 # Update Splunk configuration
 echo $password | sudo -S sed -i 's/^max_searches_per_process = .*/max_searches_per_process = 1/' $LIMITS_PATH

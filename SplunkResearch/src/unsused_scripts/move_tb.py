@@ -326,8 +326,8 @@ def copy_files_by_prefix(source_dir, destination_dir, prefixes, date_pattern=Non
 
 # Example usage
 if __name__ == "__main__":
-    SOURCE_DIR = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/tensorboard"
-    DEST_DIR = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/tensorboard/copied_files"
+    SOURCE_DIR = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/tensorboard"
+    DEST_DIR = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/tensorboard/copied_files"
     
     # Method 1: Copy files by exact datetime range
     print("Method 1: DateTime Range")

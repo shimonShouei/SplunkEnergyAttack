@@ -655,10 +655,10 @@ class ExperimentManager:
 if __name__ == "__main__":
     # Create experiment config
     # retrain_fake_start_datetime = "08/01/2024:00:00:00"
-    # model_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250611165220_102000_steps.zip"
-    # model_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250620175311_35000_steps"
-    # model_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/test_experiment_20250623144601_43000_steps.zip"
-    # model_path = "/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250711001649_264000_steps.zip"
+    # model_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250611165220_102000_steps.zip"
+    # model_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250620175311_35000_steps"
+    # model_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/test_experiment_20250623144601_43000_steps.zip"
+    # model_path = "/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250711001649_264000_steps.zip"
     action_type = "Action8"
     num_episodes = 5000000
 
@@ -683,14 +683,14 @@ if __name__ == "__main__":
     # model_name = "train_20251010153827_70000_steps"
     print(f"Model name: {model_name}, alpha_energy: {alpha_energy}, beta_alert: {beta_alert}, gamma_dist: {gamma_dist}, hosts_num: {hosts_num}%, additional_percentage: {additional_percentage}")
     for steps in range(45000, 160000, 500000):
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250626010440_151000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250726233927_243000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/test_experiment_20250806144736_355000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250908172215_520000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250916132254_180000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250916224025_1010000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250918150833_1920000_steps.zip"
-        # model_path = f"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments/models/train_20250927214506_70000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250626010440_151000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250726233927_243000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/test_experiment_20250806144736_355000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250908172215_520000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250916132254_180000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250916224025_1010000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250918150833_1920000_steps.zip"
+        # model_path = f"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments/models/train_20250927214506_70000_steps.zip"
         host = os.getenv(f"SPLUNK_HOST_{ip}")
         model_path = f"/home/shouei/GreenSecurityMeasurementAndOptimizationFramework/SplunkResearch/host_{host}_experiments/models/{model_name}.zip"
         

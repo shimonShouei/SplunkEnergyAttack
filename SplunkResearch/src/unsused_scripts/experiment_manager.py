@@ -8,7 +8,7 @@ from email.message import EmailMessage
 import ssl
 from dotenv import load_dotenv
 import os
-load_dotenv('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/src/.env')
+load_dotenv('/home/shouei/SplunkEnergyAttack/SplunkResearch/src/.env')
 
 class ExperimentManager:
     def __init__(self, base_dir="experiments", log_level=logging.INFO):
@@ -83,7 +83,7 @@ class ExperimentManager:
     
     
     def delete_experiments_without_train(self):
-        experiments_dir = r"/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments"
+        experiments_dir = r"/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments"
         for dir in os.listdir(experiments_dir):
             if not os.path.exists(os.path.join(experiments_dir, dir, "train")):
                 os.system(f"rm -rf {os.path.join(experiments_dir, dir)}")

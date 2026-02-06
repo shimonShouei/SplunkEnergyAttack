@@ -38,7 +38,7 @@ def extract_info_from_log(log_content):
     return info
 
 # Read the log file
-with open('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments__/splunk-v12/no_agent_1200_04/26/2024:13:00:00/log.txt', 'r') as file:
+with open('/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments__/splunk-v12/no_agent_1200_04/26/2024:13:00:00/log.txt', 'r') as file:
     log_content = file.read()
 
 # Extract information
@@ -48,6 +48,6 @@ extracted_info = extract_info_from_log(log_content)
 print(extracted_info)
 import json
 # dump the extracted information to a file in splunk-v12 directory as a json file
-with open('/home/shouei/GreenSecurity-FirstExperiment/SplunkResearch/experiments__/splunk-v12/no_agent_1200_04/26/2024:13:00:00/no_agent_values.json', 'w') as file:
+with open('/home/shouei/SplunkEnergyAttack/SplunkResearch/experiments__/splunk-v12/no_agent_1200_04/26/2024:13:00:00/no_agent_values.json', 'w') as file:
     json.dump(extracted_info, file)
     
